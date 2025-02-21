@@ -1,9 +1,8 @@
-.container{
+.container {
     text-align: center;
-
 }
 
-.tatle{
+.title {
     margin-top: 50px;
     color: white;
     font-size: 50px;
@@ -12,12 +11,12 @@
     align-items: center;
 }
 
-.tatle span{
+.title span {
     color: #26ffcb;
     padding-left: 15px;
 }
 
-.reset{
+.reset {
     width: 180px;
     height: 70px;
     border: none;
@@ -29,9 +28,25 @@
     color: #26ffcb;
     margin-top: 20px;
     margin-bottom: 50px;
+    transition: background 0.3s ease; /* Add transition for hover effect */
 }
 
-.boxes{
+.reset:hover {
+    background: #26ffcb;
+    color: #1f3540;
+}
+
+.board {
+    height: 600px;
+    width: 564px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: auto;
+    justify-content: center;
+}
+
+.boxes {
     display: flex;
     height: 170px;
     width: 170px;
@@ -39,20 +54,30 @@
     border: 4px solid #1f1b21;
     border-radius: 12px;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    /* transition: background 0.3s ease;  */
 }
 
-.board{
-    height: 600px;
-    width: 564px;
-    display: flex;
-    margin: auto;
+/* .boxes:hover {
+    background: #26ffcb;
+} */
+
+.boxes img {
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+    display: block;
 }
 
-.boxes img{
-    margin: 50px 50px;
+@media (max-width: 768px) {
+    .board {
+        width: 100%;
+        height: auto;
+    }
+    .boxes {
+        height: 100px;
+        width: 100px;
+    }
 }
 
-.tatle img{
-    padding: 20px 20px;
-    height: 50px;
-}
